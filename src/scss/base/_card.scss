@@ -85,11 +85,11 @@
 	display: flex;
 	border-radius: 24px;
 	background-color: #282828;
-	max-width: 527px;
+	
 	margin-inline: auto;
 	@media (max-width: 767px) {
 	padding: 14px;
-	border-radius: 12px;
+	border-radius: 12px;max-width: 527px;
 	}
 }
 .video-box{
