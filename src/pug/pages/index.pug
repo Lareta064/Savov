@@ -1,9 +1,12 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_ui.pug
+	include ../sections/_header.pug
+	main.main
+		include ../sections/_promo.pug
+
 	
 	
 	
 block variables
-	-var title = "Page";
+	-var title = "Home";
