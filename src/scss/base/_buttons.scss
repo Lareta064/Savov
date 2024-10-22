@@ -7,7 +7,7 @@
 	text-align: center;
 	flex-shrink: 0;
 	border-radius: 35px;
-	font-family: $fs;
+	font-family: $ft;
 	cursor:pointer;
 	transition: .3s; 
 	&:hover{opacity: .5;}
@@ -26,6 +26,8 @@
 	background-color: #131313;
 	border-color: #131313;
 	font-weight: 900;
+	font-family: $fs;
+	letter-spacing: 0.07em;
 }
 .tag{
 	height: 50px;

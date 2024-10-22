@@ -33,7 +33,7 @@
 .breadcrumbs{
 	padding-top: 9px;
 	padding-bottom: 9px;
-	font-family: $ft;
+	
 	li{
 		display: inline-block;
 		position: relative;
@@ -44,12 +44,14 @@
 			right: -6px;
 			top: 1px;
 			color: inherit;
+			
 		}
 		a{
 			font-size: 14px;
 			line-height: 1.5;
 			color: #eee;
 			padding-right: 6px;
+			font-family: $ft;
 		}
 		&:last-child{margin-right: 0;}
 		&:last-child a{

@@ -38,12 +38,19 @@ gulp.task("pug", function(callback) {
         .pipe(browserSync.stream());
     callback();
 });
-// Таск для компиляции SCSS в CSS
-gulp.task('ttf2woff2', async function () {
-    gulp.src(['./src/fonts/*.ttf'])
+
+// Таск для конвертации TTF в WOFF2 и копирования других шрифтов
+gulp.task('fonts', function() {
+    // Конвертация TTF в WOFF2
+    gulp.src('./src/fonts/*.ttf')
         .pipe(ttf2woff2())
-        .pipe(gulp.dest('build/fonts/'));
+        .pipe(gulp.dest('./build/fonts/'));
+
+    // Копирование остальных форматов шрифтов
+    return gulp.src('./src/fonts/*.{woff,woff2,otf}')
+        .pipe(gulp.dest('./build/fonts/'));
 });
+
 // Таск для компиляции SCSS в CSS
 gulp.task("scss", function(callback) {
     return gulp
@@ -77,7 +84,9 @@ gulp.task("scss", function(callback) {
 
 // Копирование Изображений
 gulp.task("copy:img", function(callback) {
-    return gulp.src("./src/img/**/*.*").pipe(webp()).pipe(gulp.dest("./build/img/"));
+    return gulp.src("./src/img/**/*.*")
+        .pipe(webp())
+        .pipe(gulp.dest("./build/img/"));
     callback();
 });
 
@@ -85,11 +94,13 @@ gulp.task("copy:libs", function(callback) {
     return gulp.src("./src/libs/**/*.*").pipe(gulp.dest("./build/libs/"));
     callback();
 });
+
 // Копирование Скриптов
 gulp.task("copy:js", function(callback) {
     return gulp.src("./src/js/**/*.*").pipe(gulp.dest("./build/js/"));
     callback();
 });
+
 gulp.task("copy:video", function(callback) {
     return gulp.src("./src/video/**/*.*").pipe(gulp.dest("./build/video/"));
     callback();
@@ -101,7 +112,6 @@ gulp.task("watch", function() {
     watch(
         ["./build/js/**/*.*", "./build/img/**/*.*" ,  "./build/libs/**/*.*", "./build/video/**/*.*" ],
         gulp.parallel(browserSync.reload)
-       
     );
 
     // Запуск слежения и компиляции SCSS с задержкой
@@ -113,13 +123,13 @@ gulp.task("watch", function() {
     watch("./src/pug/**/*.pug", gulp.parallel("pug"));
 
     // Следим за картинками и скриптами, и копируем их в build
-    
     watch("./src/img/**/*.*",gulp.parallel("copy:img")); 
     watch("./src/js/**/*.*", gulp.parallel("copy:js"));
-   
     watch("./src/libs/**/*.*", gulp.parallel("copy:libs"));
     watch("./src/libs/**/*.*", gulp.parallel("copy:video"));
 
+    // Слежение за шрифтами
+    watch("./src/fonts/**/*.*", gulp.parallel("fonts"));
 });
 
 // Задача для старта сервера из папки app
@@ -139,19 +149,16 @@ gulp.task("html:prettify", function() {
     return gulp
     .src('build/**/*.html')
     .pipe(formatHtml())
-    .pipe(gulp.dest('./build/'))
+    .pipe(gulp.dest('./build/'));
 });
 
 // Запускаем одновременно задачи server и watch
 gulp.task(
     "default",
     gulp.series(
-       
         gulp.parallel("clean:build"),
-      
-        gulp.parallel("scss", "ttf2woff2", "pug", "copy:img", "copy:js", "copy:libs", "copy:video"),
+        gulp.parallel("scss", "fonts", "pug", "copy:img", "copy:js", "copy:libs", "copy:video"),
         gulp.parallel("html:prettify"),
         gulp.parallel("server", "watch"),
-        
     )
 );

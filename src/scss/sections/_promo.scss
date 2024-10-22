@@ -1,5 +1,5 @@
 .promo-banner{
-	padding: 72px 33px 61px 37px;
+	padding: 72px 40px 37px 61px;
 	border-radius: 24px;
 	background-color: #282828;;
 	border-radius: 26px;
@@ -7,10 +7,16 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
+	background-image: url('../img/promo.svg');
+	background-size:contain;
+	background-position: right;
+	position: relative;
+	
 }
 .promo-title{
 	flex-shrink: 0;
 	width: min(800px, 90%);
+	margin-bottom: 82px;
 	h1, .h1{
 		margin-bottom: 56px;
 	}
