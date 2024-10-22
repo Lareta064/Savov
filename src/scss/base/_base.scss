@@ -116,13 +116,25 @@ select:-webkit-autofill:focus {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap:28px;
+  @media (max-width: 1023px) {
+   gap: 20px;
+  }
 }
 .grid-three-columns>*{
   grid-column: span 4;
+  @media (max-width: 1023px) {
+   grid-column: span 6;
+  }
+  @media (max-width: 767px) {
+  grid-column: span 12;
+  }
 }
 .grid-three-columns>.large-card{
   grid-column: span 8;
   grid-row: span 1;
+  @media (max-width: 1023px) {
+      grid-column: span 12;
+    }
 }
 .visible-desktop{
   display: flex;
