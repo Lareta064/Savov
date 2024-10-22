@@ -20,6 +20,13 @@
 	color: $lightText;
 	font-weight: 700;
 }
+.h2{
+	margin-bottom: 25px;
+	@media (max-width: 1439px) {
+		font-size: 18px;
+		margin-bottom: 18px;
+	}
+}
 .h3{
 	font-size: 24px;
 	color: $white;

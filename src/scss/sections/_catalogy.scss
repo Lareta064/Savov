@@ -1,0 +1,17 @@
+.catalogy{
+	padding-top: 40px;
+}
+.catalogy-tags{
+	display: flex;
+	flex-wrap: wrap;
+	row-gap:18px;
+	column-gap:18px;
+	@media (max-width: 767px) {
+	 width: calc(50% + 50vw);
+	 overflow: hidden;
+	 overflow-x: auto;
+	 flex-wrap: nowrap;
+	 scrollbar-width: none;
+	 &::-webkit-scrollbar{display: none;}
+	}
+}

@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		});
 	}
-	toggleActiveClass('tags-wrapper', 'tag')
+	toggleActiveClass('catalogy-tags', 'tag')
 	
 
 });

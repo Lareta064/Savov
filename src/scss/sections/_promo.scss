@@ -81,6 +81,10 @@
 			font-size: 14px;
 		}
 	}
+	.tag{
+		font-size: 14px;
+		font-family: $ff;
+	}
 	@media (max-width: 1439px) {
 		.tag{
 			padding-inline: 15px;
