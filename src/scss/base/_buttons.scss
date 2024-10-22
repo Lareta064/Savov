@@ -1,0 +1,38 @@
+.btn,
+.btn[type],
+.tag{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-shrink: 0;
+	border-radius: 35px;
+	font-family: $fs;
+	cursor:pointer;
+	transition: .3s; 
+	&:hover{opacity: .5;}
+}
+.btn, .btn[type]{
+	
+	padding-inline: 46px;
+	background-color: $dark;
+	color: $white;
+	border:1px solid #f9f9f9;
+	height: 66px;
+	font-size: 20px;
+	font-weight: 700;
+	
+}
+.tag{
+	height: 50px;
+	padding-inline:40px;
+	background-color: transparent;
+	font-weight: 600;
+	color: $lightText;
+	border: 1px solid currentColor;
+	&.active{
+		background-color: #fff;
+		color: $dark;
+	}
+	
+}
