@@ -87,10 +87,16 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 .container{
-  width: min(1680px, 100%);
-  padding-inline: 20px;
+  width: 1680px;
+  width:min(1872px, 100%);
+  padding-inline: 96px;
   margin: 0 auto;
- 
+ @media (max-width: 1364px) {
+  padding-inline: 50px;
+ }
+ @media (max-width: 1023px) {
+  padding-inline: 20px;
+ }
 }
 .flex, .flex-center,.flex-wrap, .flex-center-wrap,.tags-wrapper{
   display: flex;
