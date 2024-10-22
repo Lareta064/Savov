@@ -47,7 +47,7 @@
 		background-color: #fff;
 		color: $dark;
 	}
-	@media (max-width: 1439px) {
+	@media (max-width: 1699px) {
 		height: 38px;
 		padding-inline: 30px;
 		font-size: 18px;
@@ -63,6 +63,9 @@
 	padding-inline: 22px;
 	background-color: $dark;
 	&:hover{opacity: 1;}
+	@media (max-width: 1699px) {
+	  height: 31px;
+	}
 }
 .btn-play{
 	width: 126px;

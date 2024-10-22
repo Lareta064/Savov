@@ -30,6 +30,9 @@
 .h3{
 	font-size: 24px;
 	color: $white;
+	@media (max-width: 1699px) {
+	 font-size: 20px;
+	}
 }
 .txt-20,.bold-20, .subtitle{
 	font-size: 20px;
@@ -51,6 +54,7 @@
 	line-height: 1.5;
 	font-weight: 300;
 	color: #D6D6D6;
+
 }
 .breadcrumbs{
 	padding-top: 9px;

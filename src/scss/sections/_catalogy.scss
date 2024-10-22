@@ -1,11 +1,13 @@
 .catalogy{
 	padding-top: 40px;
+	padding-bottom: 70px;
 }
 .catalogy-tags{
 	display: flex;
 	flex-wrap: wrap;
 	row-gap:18px;
 	column-gap:18px;
+	margin-bottom: 40px;
 	@media (max-width: 767px) {
 	 width: calc(50% + 50vw);
 	 overflow: hidden;
