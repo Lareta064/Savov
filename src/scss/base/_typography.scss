@@ -67,6 +67,10 @@
 			color: #eee;
 			padding-right: 6px;
 			font-family: $ft;
+			@media (max-width: 767px) {
+			font-size: 10px;
+			font-family: $ff;
+			}
 		}
 		&:last-child{margin-right: 0;}
 		&:last-child a{

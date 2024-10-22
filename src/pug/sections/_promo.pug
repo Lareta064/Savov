@@ -23,7 +23,12 @@ section.promo
 							use(href='./img/sprite.svg#svg-eye')
 						|290
 					p.bold-20 7 min read
-				a(href="#!").btn.btn--black Читать статью
+				//=== кнопка для десктоп версии ===
+				.visible-desktop
+					a(href="#!").btn.btn--black Читать статью
+				//=== кнопка для мобайл версии ===
+				.hide-desktop
+					a(href="#!").btn.btn--black Подать заявку
 
 			.promo-image
 				img(src="./img/promo.svg", alt="img")
