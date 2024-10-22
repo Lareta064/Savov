@@ -29,3 +29,30 @@ h3, .h3{
 	font-weight: 300;
 	color: #D6D6D6;
 }
+.breadcrumbs{
+	li{
+		display: inline-block;
+		position: relative;
+		margin-right: 6px;
+		&:not(:last-child):after{
+			content: '/';
+			position: absolute;
+			right: -6px;
+			top: 1px;
+			color: inherit;
+		}
+		a{
+			font-size: 14px;
+			line-height: 1.5;
+			color: #eee;
+			padding-right: 6px;
+		}
+		&:last-child{margin-right: 0;}
+		&:last-child a{
+			color: #F7F7F5;
+			cursor:default;
+			&:hover{color: #F7F7F5;}
+			pointer-events: none;
+		}
+	}
+}
