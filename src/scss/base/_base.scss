@@ -17,6 +17,7 @@
 	width: 100%;
   background-color: #131313;
   color: white;
+  font-family: $ff;
   font-size: 16px;
   line-height: 1.2;
 	-webkit-font-smoothing: antialiased;
@@ -91,16 +92,16 @@ select:-webkit-autofill:focus {
   margin: 0 auto;
  
 }
-.flex, .flex-center,.flex-wrap, .flex-center-wrap{
+.flex, .flex-center,.flex-wrap, .flex-center-wrap,.tags-wrapper{
   display: flex;
   flex-direction:row;
   align-items: center;
   column-gap:18px;
 }
 
-.flex-center, .flex-center-wrap{
+.flex-center, .flex-center-wrap,.tags-wrapper{
   justify-content: center;
 }
-.flex-wrap, .flex-center-wrap{
+.flex-wrap, .flex-center-wrap,.tags-wrapper{
   flex-wrap:wrap;
 }

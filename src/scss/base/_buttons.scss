@@ -1,6 +1,6 @@
 .btn,
 .btn[type],
-.tag{
+.tag,.tag-slim{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -13,7 +13,6 @@
 	&:hover{opacity: .5;}
 }
 .btn, .btn[type]{
-	
 	padding-inline: 46px;
 	background-color: $dark;
 	color: $white;
@@ -34,5 +33,15 @@
 		background-color: #fff;
 		color: $dark;
 	}
-	
+}
+
+.tag-slim{
+	cursor: default;
+	height: 40px;
+	font-size: 14px;
+	column-gap: 5px;
+	font-family: $ff;
+	padding-inline: 22px;
+	background-color: $dark;
+	&:hover{opacity: 1;}
 }
