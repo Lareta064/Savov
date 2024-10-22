@@ -17,6 +17,23 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 	toggleActiveClass('catalogy-tags', 'tag')
-	
+	/*====video===========*/
+	const videoBlock = document.querySelector('.video-box');
+	if(videoBlock){
+		const videoBlockContent = videoBlock.querySelector('video');
+		videoBlock.addEventListener('click', ()=>{
+			if(videoBlock.classList.contains('active')){
+				videoBlockContent.pause();
+				videoBlock.classList.remove('active');
+			}else{
+				videoBlockContent.play();
+				videoBlock.classList.add('active');
+			}
+		});
+		videoBlock.addEventListener("ended", function () {
+			videoBlockContent.pause();
+			videoBlock.classList.remove('active');
+		});
+	}
 
 });

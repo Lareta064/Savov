@@ -112,6 +112,18 @@ select:-webkit-autofill:focus {
 .flex-wrap, .flex-center-wrap,.tags-wrapper{
   flex-wrap:wrap;
 }
+.grid-box,.grid-three-columns{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:28px;
+}
+.grid-three-columns>*{
+  grid-column: span 4;
+}
+.grid-three-columns>.large-card{
+  grid-column: span 8;
+  grid-row: span 1;
+}
 .visible-desktop{
   display: flex;
   @media (max-width: 767px) { display: none;}
