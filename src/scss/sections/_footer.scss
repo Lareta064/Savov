@@ -5,6 +5,7 @@ footer.footer{
 	.footer-content{
 		display: flex;
 		justify-content: space-between;
+		column-gap:50px;
 	}
 	.footer-logo{
 		.logo{margin-bottom: 28px;}
@@ -30,12 +31,21 @@ footer.footer{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	column-gap: 52px;
+	@media (max-width: 1699px) {
+	 column-gap: 25px;
+	}
+	@media (max-width: 1279px) {
+		column-gap: 15px;
+	}
 }
 .nav{
 	.nav-title{
 		margin-bottom: 23px;
 		font-size: 18px;
 		color: #d6d6d6;
+		@media (max-width: 1699px) {
+				font-size: 13px;
+			}
 	}
 }
 .nav-list{
@@ -48,5 +58,11 @@ footer.footer{
 		font-size: 18px;
 		transition: .3s; 
 		&:hover{color: #d6d6d6;}
+				@media (max-width: 1699px) {
+					font-size: 13px;
+				}
 	}
+}
+@media (max-width: 1199px) {
+ .footer-nav{display: none;}
 }

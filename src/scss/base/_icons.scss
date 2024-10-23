@@ -5,6 +5,14 @@
 	transition: .3s; 
 	color: #4D4E4F;
 	&:hover{color: #A4A6A9;}
+	@media (max-width: 1699px) {
+		width: 324px;
+		height: 50px;
+	}
+	@media (max-width: 1279px) {
+	    width: 260px;
+		height: 40px;
+	}
 }
 .svg-eye{
 	width: 18px;
