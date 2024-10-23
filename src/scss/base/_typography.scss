@@ -111,11 +111,20 @@
 	&-item{
 		font-weight: 900;
 		font-size: 20px;
-		line-height: 225%;
+		line-height: 2;
 		color: #fff;
 		transition: .3s; 
 		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		&:hover{opacity: .65;}
+		@media (max-width: 1199px) {
+		 font-size: 16px;
+		}
+		@media (max-width: 767px) {
+		 font-size: 12px;
+		}
 	}
 	&-item.active{color:  #525151;}
 	.pagination-next.pagination-item, .pagination-prev.pagination-item{
@@ -123,21 +132,61 @@
 		padding-left: 20px;
 		padding-right: 20px;
 		background-color: #282828;
-		border-radius: 25px;
+		border-radius:40px  ;
 		svg{transition: .3s; }
-		&:hover svg{color: white}
+		&:hover {background-color: #7e7b7b;}
 		
 		a{
 			display: flex;
-		justify-content: center;
-		align-items: center;
-		column-gap:10px;font-size: 14px;
-		font-weight: 400;
+			justify-content: center;
+			align-items: center;
+			column-gap:10px;font-size: 14px;
+			font-weight: 400;
+			
+
+		}
+		@media (max-width: 1199px) {
+		 span,svg{display: none;}
+		 width: 40px;
+		 height: 40px;
+		 padding: 0;
+		 background-repeat: no-repeat;
+		 background-position: center;
+		 background-size: auto;
+		 background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='17' viewBox='0 0 14 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.78571 15.5L2 8.24074L5 1.5' stroke='%233C3D3D' stroke-width='2' stroke-linecap='round' /%3e%3cpath d='M12.7857 15.5L10 8.24074L13 1.5' stroke='%233C3D3D' stroke-width='2' stroke-linecap='round' /%3e%3c/svg%3e");
 
 		}
 
 	}
 	.pagination-next.pagination-item{
 		svg{transform: rotate(180deg);}
+		@media (max-width: 1199px) {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='17' viewBox='0 0 14 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.21429 1.5L12 8.75926L9 15.5' stroke='%233C3D3D' stroke-width='2' stroke-linecap='round' /%3e%3cpath d='M1.21429 1.5L4 8.75926L0.999999 15.5' stroke='%233C3D3D' stroke-width='2' stroke-linecap='round' /%3e%3c/svg%3e");
+		}
+	}
+	.pagination-dot a{
+		display: flex;
+		column-gap:25px;
+		align-items: center;
+		position: relative;
+		height: 2em;
+		&:before, &:after{
+			content: '';
+			display: block;
+			background-color: #525151;;
+			width: 7px;
+			height: 7px;
+			
+		}
+		&:hover{
+			&:before,&:after, span{background-color: #fff;}
+		}
+		&:hover:before, &:hover:after{background-color: #fff;}
+	}
+	.pagination-dot span{
+		display: block;
+		background-color: #525151;
+		width: 7px;height: 7px;
+		
 	}
 }
