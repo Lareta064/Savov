@@ -1,7 +1,13 @@
 *[class^="icon-"]{
 	display: inline-block;
 }
-
+.svg-footer-logo{
+	width: 476px;
+	height: 71px;
+	transition: .3s; 
+	color: #4D4E4F;
+	&:hover{color: #A4A6A9;}
+}
 .svg-eye{
 	width: 18px;
 	height: 14px;

@@ -1,0 +1,24 @@
+footer.footer{
+	background-color: #242526;
+	padding-top: 50px;
+	padding-bottom: 100px;
+	.footer-logo{
+		.logo{margin-bottom: 28px;}
+	}
+	.footer-logo .link{
+		color: rgba(214, 214, 214, .8);
+		font-family: $ft;
+		display: block;
+		width: fit-content;
+		margin-bottom: 5px;
+		&:hover{color:white;}
+	}
+}
+.bank-details{
+	font-size: 12px;
+	line-height: 1.41;
+	color: rgba(214, 214, 214, .8);
+	margin-top: 15px;
+	font-family: $ft;
+
+}
