@@ -21,7 +21,7 @@ section.catalogy
 			button.tag(type="button") #ecommerce
 
 		//======cards wrapper ===
-		.catalogy-content.grid-three-columns
+		.catalogy-content.grid-three-columns.has-hidden
 			+card
 			+card2
 			+card2
@@ -37,7 +37,7 @@ section.catalogy
 			+card
 			//=====image-card====
 			a(href="#!").product-card.image-card
-				img(src="./img/special-card.webp", width="473" height="622" alt="img")
+				img(src="./img/special-card.webp", srcset="./img/special-card@2x.webp 2x"  width="473" height="622" alt="img")
 			+card
 			+card
 			+card
@@ -68,11 +68,27 @@ section.catalogy
 					video.video.lazy( muted autoplay playsinline)
 						source(src="./video/video.mp4", type="video/mp4")
 		
+			+card2
+			+card2
+			//==== CTA CARD ====
+			.product-card.cta-card
+				.cta-card__title Наши специалисты могут вам помочь?
+				img(src="./img/rocket.webp", srcset="./img/rocket@2x.webp 2x" width="199" height="180" alt="img")
+				a(href="#!").btn Подать заявку
+			
+			+card2
+			+card2
 			+card3
 			+card3
 			+card3
+			+card3
+			+card3
+			+card3
+			+card3
+			+card3
+		
 		.catalogy-bottom.flex
-			button(type="button").btn.show-hidden
+			button(type="button").btn#show-more-btn
 				span Показать больше 
 				svg.svg-arrow-down
 					use(href='./img/sprite.svg#svg-arrow-down')

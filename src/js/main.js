@@ -35,5 +35,23 @@ document.addEventListener("DOMContentLoaded", function () {
 			videoBlock.classList.remove('active');
 		});
 	}
+	/*==== SHOW HIDDEN CARDS =====*/
+	const btnShowMore = document.getElementById('show-more-btn');
+	if(btnShowMore){
+		btnShowMore.addEventListener('click', function() {
+			const parent = document.querySelector('.has-hidden');
+			const hiddenElements = parent.querySelectorAll('.hidden');
+			
+			// Показать по 6 элементов
+			for (let i = 0; i < 6 && i < hiddenElements.length; i++) {
+				hiddenElements[i].classList.remove('hidden');
+			}
 
+			// Если больше скрытых элементов нет, скрыть кнопку
+			if (parent.querySelectorAll('.hidden').length === 0) {
+				this.classList.add('hidden');
+			}
+		});
+		
+	}
 });
