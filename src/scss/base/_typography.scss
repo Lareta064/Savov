@@ -75,6 +75,13 @@
 	width: fit-content;
 	transition: .3s; 
 }
+.icon-link{
+	column-gap:13px;
+	img{
+		width: 22px;
+		flex-shrink: 0;
+	}
+}
 .breadcrumbs{
 	padding-top: 9px;
 	padding-bottom: 9px;
