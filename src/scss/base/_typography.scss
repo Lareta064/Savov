@@ -1,8 +1,8 @@
-.promo h1, .h1{
+.inner-promo h1, .promo h1, .h1{
 	font-size: 90px;
 	color: white;
 	line-height: .89;
-	font-weight: 800;
+	font-weight: 900;
 	@media (max-width: 1439px) {
 	  font-size: 70px;
 	}
@@ -11,6 +11,24 @@
 	}
 	@media (max-width: 767px) {
 	 font-size: 36px;
+	}
+}
+.inner-promo h1, .inner-promo .h1{
+	font-weight: 900;
+	font-size: 96px;
+	line-height: 100%;
+	letter-spacing: -0.01em;
+	color: #f9f9f9;
+	@media (max-width: 1439px) {
+		font-size: 70px;
+	}
+
+	@media (max-width: 1023px) {
+		font-size: 56px;
+	}
+
+	@media (max-width: 767px) {
+		font-size: 35px;
 	}
 }
 .h2,
