@@ -103,6 +103,15 @@ select:-webkit-autofill:focus {
     padding-inline: 16px;
   }
 }
+.white-wrapper{
+  padding: 33px;
+  border-radius: 24px;
+  background-color: #fff;
+ &>*+*{margin-top: 40px;}
+ @media (max-width: 767px) {
+   border-radius: 0;
+ }
+}
 .flex, .flex-center,.flex-wrap, .flex-center-wrap,.tags-wrapper,.icon-link{
   display: flex;
   flex-direction:row;
@@ -142,6 +151,11 @@ select:-webkit-autofill:focus {
 }
 .grid-three-columns> .inner-form{
   grid-column: span 12;
+}
+.aside-grid{
+ display: grid;
+ grid-template-columns: 1fr 439px;
+ column-gap:40px;
 }
 .visible-768{
   display: flex;
