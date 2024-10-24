@@ -10,8 +10,9 @@
 	font-family: $ft;
 	cursor:pointer;
 	transition: .3s; 
-	&:hover{opacity: .5;}
 }
+.btn:hover,
+.btn[type]:hover{opacity: .5;}
 .btn, .btn[type]{
 	padding-inline: 46px;
 	background-color: $dark;
@@ -39,23 +40,33 @@
 }
 .tag{
 	height: 50px;
-	padding-inline:40px;
+	padding-inline:47px;
 	background-color: transparent;
 	font-weight: 600;
 	font-size: 24px;
 	font-family: $ft;
 	color: $lightText;
 	flex-shrink: 0;
+	column-gap:6px;
 	border: 1px solid currentColor;
 	&.active{
 		background-color: #fff;
 		color: $dark;
 	}
 	@media (max-width: 1699px) {
-		height: 38px;
+		height: 40px;
 		padding-inline: 30px;
 		font-size: 18px;
 	}
+}
+.tag.tag--mini{
+	font-size: 14px;
+	background-color: $dark;
+	color: white;
+}
+.tag:hover{
+ opacity: 1;
+ background-color: #949494;
 }
 
 .tag-slim{
@@ -81,5 +92,31 @@
 	@media (max-width: 1023px) {
 	   width: 53px;
 	   height: 53px;
+	}
+}
+.btn-outline{
+	padding-left: 38px;
+	padding-right: 38px;
+	border:1px solid #000;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	height: 47px;
+	border-radius: 50px;
+	transition: .3s; 
+	&:hover{
+		color: white;
+		background-color: #000;
+	}
+	@media (max-width: 1699px) {
+		height: 40px;
+		padding-inline: 30px;
+		font-size: 18px;
+	}
+	@media (max-width: 1699px) {
+		height: 40px;
+		padding-inline: 30px;
+		font-size: 14px;
 	}
 }
