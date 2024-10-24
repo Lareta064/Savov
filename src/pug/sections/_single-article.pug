@@ -133,4 +133,25 @@ section.article.custom-text
 								use(href='./img/sprite.svg#svg-eye')
 							|90
 						a(href="#!").btn-outline Назад 
+//=================FORM==============
+section.subscribe
+	.container
+		.inner-form
+			.flex.inner-form-row
+				.inner-text
+					img(src="./img/bell.webp", srcset="./img/bell@2x.webp 2x" width="141" height="168" alt="")
+					.title-32 Узнавай о выходе новых статей быстрее всех 
+				form.cta-form(action="" method="method")
+					.form-item
+						input(type="text" placeholder="Email")
+					.form-btn
+						input.btn(type="submit" value="Отправить заявку")
+//=================CARDS =============		
+section.catalogy-preview
+	.container
+		h2.title Еще полезные статьи
+		.catalogy-content.grid-three-columns
+			+card2
+			+card2
+			+card2
 					

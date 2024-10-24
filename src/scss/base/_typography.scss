@@ -31,6 +31,20 @@
 		font-size: 35px;
 	}
 }
+.title{
+	font-weight: 800;
+	font-size: 70px;
+	color: #4f4f4f;
+	margin-bottom: 50px;
+	@media (max-width: 1439px) {
+		font-size: 50px;
+		margin-bottom: 40px;
+	}
+	@media (max-width: 767px) {
+	font-size: 36px;
+	margin-bottom: 30px;
+	}
+}
 .h2,
 .h3{
 	font-size: 28px;

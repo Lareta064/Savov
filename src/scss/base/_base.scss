@@ -88,6 +88,18 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   -webkit-text-fill-color:white;
 }
+main{
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  &>*{width: 100%;}
+  row-gap:100px;
+  @media (max-width: 767px) {
+   row-gap: 60px;
+
+  padding-bottom: 60px;
+  }
+}
 .container{
   
   width:min(1842px, 100%);
