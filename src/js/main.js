@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	/*******article-menu******* */
     const articleContent = document.getElementById('article-content');
     const articleMenu = document.getElementById('article-menu');
+	const headings = articleContent.querySelectorAll('h2');
     if(articleMenu){
 		headings.forEach(heading => {
 			const anchorId = heading.id;
@@ -106,5 +107,38 @@ document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('scroll', updateActiveMenuItem);
 		
 		updateActiveMenuItem();
-	}	
+	}
+	/******slick slider******** */
+	 $('.catalogy-slider').slick({
+		slidesToShow: 3,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					dots: true,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 799,
+				settings: {
+				
+					slidesToShow: 1.5,
+					slidesToScroll: 1,
+					dots: true,
+				}
+			},
+			{
+				breakpoint: 574,
+				settings: {
+					dots: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					
+				}
+			},
+		]
+	});
 });
