@@ -140,11 +140,17 @@ select:-webkit-autofill:focus {
 .grid-three-columns> .inner-form{
   grid-column: span 12;
 }
-.visible-desktop{
+.visible-768{
   display: flex;
   @media (max-width: 767px) { display: none;}
 }
-.hide-desktop{
+.visible-1200{
+  display: block;
+  @media (max-width: 1199px) {
+  display: none;
+  }
+}
+.hide-768{
   display: none;
   @media (max-width: 767px) { display: block;}
 }

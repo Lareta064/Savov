@@ -2,13 +2,24 @@ footer.footer{
 	background-color: #242526;
 	padding-top: 50px;
 	padding-bottom: 100px;
+	color: rgba(121, 121, 121, .8);
 	.footer-content{
 		display: flex;
 		justify-content: space-between;
 		column-gap:50px;
+		@media (max-width: 1199px) {
+		flex-direction: column;
+		}
 	}
 	.footer-logo{
 		.logo{margin-bottom: 28px;}
+			
+			
+		
+		@media (max-width: 767px) {
+			margin-bottom: 22px;
+		}
+			
 	}
 	.footer-logo .link{
 		color: rgba(214, 214, 214, .8);
@@ -18,6 +29,9 @@ footer.footer{
 		margin-bottom: 5px;
 		&:hover{color:white;}
 	}
+		.email-link {
+			color: #a4a6a9;
+		}
 }
 .bank-details{
 	font-size: 12px;
@@ -25,7 +39,9 @@ footer.footer{
 	color: rgba(214, 214, 214, .8);
 	margin-top: 15px;
 	font-family: $ft;
-
+	@media (max-width: 1199px) {
+	display: none;
+	}
 }
 .footer-nav{
 	display: grid;
@@ -53,7 +69,7 @@ footer.footer{
 	flex-direction: column;
 	row-gap:10px;
 	
-	.nav-item{
+	.nav-item, .email-link{
 		color: #797979;
 		font-size: 18px;
 		transition: .3s; 
@@ -62,6 +78,33 @@ footer.footer{
 					font-size: 13px;
 				}
 	}
+	.nav-item.email-link{ color:#a4a6a9;}
+}
+.footer-bottom{
+	margin-top: 34px;
+	font-family: $ft;
+	p{
+		max-width: 1280px;
+		font-size: 12px;
+		line-height: 1;
+		@media (max-width: 767px) {
+		line-height: 1.41;
+		}
+		
+	}
+	@media (max-width: 767px) {
+	margin-top: 10px;
+	}
+}
+.footer-mobile-content{
+	display: none;
+	.social-block{margin-bottom: 28px;}
+	.link{color: #d6d6d6;}
+	@media (max-width: 1199px) {
+			display: flex;
+			flex-direction: column;
+			row-gap:22px;
+		}
 }
 @media (max-width: 1199px) {
  .footer-nav{display: none;}
