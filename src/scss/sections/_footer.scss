@@ -101,8 +101,9 @@ footer.footer{
 }
 .footer-mobile-content{
 	display: none;
-	.social-block{margin-bottom: 28px;}
+	.social-block{margin-bottom: 6px;}
 	.link{color: #d6d6d6;}
+	.email-link {font-size: 18px}
 	@media (max-width: 1199px) {
 			display: flex;
 			flex-direction: column;

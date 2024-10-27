@@ -8,7 +8,7 @@
 	flex-shrink: 0;
 	border-radius: 35px;
 	font-family: $ft;
-	cursor:pointer;
+	
 	transition: .3s; 
 }
 .btn:hover,
@@ -22,6 +22,7 @@
 	font-size: 20px;
 	font-weight: 700;
 	column-gap: 10px;
+	cursor: pointer;
 	@media (max-width: 1439px) {
 	 height: 60px;
 	font-size: 18px;

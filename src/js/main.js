@@ -110,39 +110,61 @@ document.addEventListener("DOMContentLoaded", function () {
 		updateActiveMenuItem();
 	}
 	/******slick slider******** */
-	 $('.catalogy-slider').slick({
-		slidesToShow: 3,
-		infinite: false,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					dots: true,
-					slidesToShow: 2,
-					slidesToScroll: 1,
-					dots: true
-				}
-			},
-			{
-				breakpoint: 799,
-				settings: {
-				
-					slidesToShow: 1.5,
-					slidesToScroll: 1,
-					dots: true,
-				}
-			},
-			{
-				breakpoint: 574,
-				settings: {
-					dots: true,
-					slidesToShow: 1,
-					slidesToScroll: 1,
+	  function initializeSlider() {
+		if ($(window).width() < 1024) {
+		if (!$('.catalogy-slider').hasClass('slick-initialized')) {
+			$('.catalogy-slider').slick({
+			// Ваши настройки слайдера
+			dots: true,
+			// infinite: true,
+			speed: 500,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						dots: true,
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 799,
+					settings: {
 					
-				}
-			},
-		]
+						slidesToShow: 1.5,
+						slidesToScroll: 1,
+						dots: true,
+					}
+				},
+				{
+					breakpoint: 574,
+					settings: {
+						dots: true,
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						
+					}
+				},
+			]
+
+			});
+		}
+		} else {
+		if ($('.catalogy-slider').hasClass('slick-initialized')) {
+			$('.catalogy-slider').slick('unslick'); // Уничтожаем слайдер
+		}
+		}
+	}
+
+	initializeSlider(); // Инициализируем слайдер при загрузке страницы
+
+	$(window).resize(function() {
+		initializeSlider(); // Переинициализируем при изменении размера окна
 	});
+	 
 	// Расчет ширины для .slick-dots li
     function setDotsWidth() {
         const dots = $('.slick-dots');

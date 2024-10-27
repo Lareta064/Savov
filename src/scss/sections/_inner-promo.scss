@@ -2,6 +2,11 @@
 	.promo-title{width: min(1200px, 100%);}
 	@media (max-width: 767px) {
 	.promo-bottom .tags-wrapper{margin-top: auto;}
+		.promo-banner{padding-bottom: 33px; padding-top: 29px;}
 	}
-	
+}
+.inner-promo +*{
+	@media (max-width: 767px) {
+	padding-top: 26px!important;
+	}
 }

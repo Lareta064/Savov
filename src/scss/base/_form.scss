@@ -62,9 +62,13 @@
 	@media (max-width: 1023px) {
 	  flex-direction: column;
 	  padding:14px;
+	 
 	 .inner-text{
 		column-gap: 14px;
-		margin-bottom: 40px;
+		margin-bottom: 27px;
 	 }
+	}
+	@media (max-width: 767px) {
+	  border-radius: 12px;
 	}
 }

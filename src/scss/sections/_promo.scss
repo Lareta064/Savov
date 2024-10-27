@@ -46,6 +46,13 @@
 		}
 	}
 }
+.main .promo-banner{
+	min-height: 582px;
+	@media (max-width: 1439px) {
+		min-height: 444px;
+	}
+	@media (max-width: 767px) {min-height: 505px;}
+}
 .promo-title{
 	flex-shrink: 0;
 	width: min(800px, 70%);

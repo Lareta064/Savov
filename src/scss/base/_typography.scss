@@ -2,7 +2,7 @@
 	font-size: 90px;
 	color: white;
 	line-height: .89;
-	font-weight: 900;
+	font-weight: 800;
 	@media (max-width: 1439px) {
 	  font-size: 70px;
 	}
@@ -14,7 +14,7 @@
 	}
 }
 .inner-promo h1, .inner-promo .h1{
-	font-weight: 900;
+	font-weight: 800;
 	font-size: 96px;
 	line-height: 100%;
 	letter-spacing: -0.01em;
@@ -54,6 +54,7 @@
 }
 .h2{
 	margin-bottom: 25px;
+	color: #4f4f4f;
 	@media (max-width: 1439px) {
 		font-size: 18px;
 		margin-bottom: 18px;
