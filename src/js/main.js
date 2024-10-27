@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
 			parent.addEventListener('click', function (e) {
 
 				if (e.target.classList.contains(childClass)) {
-					// Удаляем класс 'active' у всех дочерних элементов внутри родителя
+					
 					parent.querySelectorAll('.' + childClass).forEach(child => {
 						child.classList.remove('active');
 					});
-					// Добавляем класс 'active' элементу, по которому был клик
+					
 					e.target.classList.add('active');
 				}
 			});
@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			menuItem.appendChild(menuLink);
 			articleMenu.appendChild(menuItem);
+			menuItem.classList.add('article-menu-item'); // Добавьте класс для стилей
 		});
 
 		function updateActiveMenuItem() {
@@ -111,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	/******slick slider******** */
 	 $('.catalogy-slider').slick({
 		slidesToShow: 3,
+		infinite: false,
 		responsive: [
 			{
 				breakpoint: 1024,
@@ -141,4 +143,21 @@ document.addEventListener("DOMContentLoaded", function () {
 			},
 		]
 	});
+	// Расчет ширины для .slick-dots li
+    function setDotsWidth() {
+        const dots = $('.slick-dots');
+        const dotItems = dots.find('li');
+        const totalWidth = dots.width();
+        const numberOfDots = dotItems.length;
+
+        // Рассчитываем ширину для каждого .slick-dots li
+        const dotWidth = totalWidth / numberOfDots;
+
+        // Устанавливаем ширину
+        dotItems.css('width', dotWidth);
+    }
+
+    // Устанавливаем ширину точек при загрузке и изменении размера окна
+    setDotsWidth();
+    $(window).resize(setDotsWidth);
 });

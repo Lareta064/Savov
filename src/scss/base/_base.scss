@@ -112,8 +112,9 @@ main{
  @media (max-width: 1023px) {
   padding-inline: 20px;
  }
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     padding-inline: 16px;
+    &.container-mobile{padding-inline: 0;}
   }
 }
 .white-wrapper{
@@ -123,6 +124,7 @@ main{
  &>*+*{margin-top: 40px;}
  @media (max-width: 767px) {
    border-radius: 0;
+  padding: 30px;
  }
 }
 .flex, .flex-center,.flex-wrap, .flex-center-wrap,.tags-wrapper,.icon-link{
