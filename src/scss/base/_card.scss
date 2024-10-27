@@ -37,6 +37,14 @@
 			}
 		}
 		&:hover:after{height: 100%;}
+		&:hover .tags-wrapper{
+			opacity: 0;
+			z-index: 0;
+		}
+		&:hover .tags-wrapper.tags-wrapper--hover{
+			opacity: 1;
+			z-index: 3;
+		}
 	}
 	&__img img{
 		width: 100%;
@@ -50,6 +58,11 @@
 		top: 27px;
 		left: 26px;
 		z-index: 3;
+	}
+	.tags-wrapper.tags-wrapper--hover{
+		opacity: 0;
+		z-index: -1;
+		transition: .3s; 
 	}
 	&__body{
 		width: 100%;
