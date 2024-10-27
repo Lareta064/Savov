@@ -1,12 +1,10 @@
-.catalogy{
-	padding-bottom: 70px;
-}
+
 .catalogy-tags{
 	display: flex;
 	flex-wrap: wrap;
-	row-gap:18px;
+	row-gap:21px;
 	column-gap:18px;
-	margin-bottom: 40px;
+	margin-bottom: 50px;
 	@media (max-width: 767px) {
 	 width: calc(50% + 50vw);
 	 overflow: hidden;
@@ -36,5 +34,8 @@
 	}
 	@media (max-width: 767px) {
 	 margin-top: 22px;
+	 width: fit-content;
+	 margin-inline: auto;
+	 .btn{width: 100%;}
 	}
 }

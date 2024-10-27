@@ -78,6 +78,14 @@
 	 font-size: 20px;
 	}
 }
+.title-45{
+	font-weight: 900;
+	font-size: 45px;
+	color: #d6d6d6;
+	@media (max-width: 1439px) {
+		font-size: 24px;
+	}
+}
 .txt-20,.bold-20, .subtitle{
 	font-size: 20px;
 }

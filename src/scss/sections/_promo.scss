@@ -1,5 +1,6 @@
 .promo+* {
-	padding-top: 40px;
+	padding-top: 40px!important;
+	margin-top: 0!important;
 
 }
 .promo-banner{
@@ -52,12 +53,15 @@
 	position: relative;
 	z-index: 2;
 	h1, .h1{margin-bottom: 56px;}
+	.subtitle {max-width: 700px;font-family: $ff;}
+			
+		
 	@media (max-width: 1439px) {
 		margin-bottom: 10px;
 		width: min(630px, 70%);
-		.subtitle{
-			max-width: 500px;
-		}
+		.subtitle{max-width: 500px;}
+			
+		
 	h1,.h1 {
 			margin-bottom: 40px;
 		}
@@ -80,14 +84,17 @@
 	z-index: 2;
 	.bold-20{
 		line-height: 1.8;
-		font-family: 'General Sans Variable';
+		font-family: $ff;
 		@media (max-width: 1439px) {
 			font-size: 14px;
+			font-family: 'General Sans Variable';
 		}
 	}
 	.tag{
 		font-size: 14px;
 		font-family: $ff;
+		padding-left: 34px;
+		padding-right: 34px;
 	}
 	@media (max-width: 1439px) {
 		.tag{
@@ -100,7 +107,8 @@
 	   flex-direction: column;
 	   justify-content: space-between;
 	   flex-grow:1;
-	   .tags-wrapper{align-self: flex-start;}
+	   &>*{width: 100%;}
+	   .tags-wrapper{justify-content: flex-start;}
 	   .btn.btn--black{width: 100%; max-width: 340px;}
 		.hide-desktop{width: 100%;}
 	}
