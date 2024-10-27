@@ -84,7 +84,6 @@
 	z-index: 2;
 	.bold-20{
 		line-height: 1.8;
-		
 		font-family: $ff;
 		@media (max-width: 1439px) {
 			font-size: 14px;
@@ -108,7 +107,8 @@
 	   flex-direction: column;
 	   justify-content: space-between;
 	   flex-grow:1;
-	   .tags-wrapper{align-self: flex-start;}
+	   &>*{width: 100%;}
+	   .tags-wrapper{justify-content: flex-start;}
 	   .btn.btn--black{width: 100%; max-width: 340px;}
 		.hide-desktop{width: 100%;}
 	}
