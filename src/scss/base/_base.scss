@@ -96,11 +96,11 @@ main{
   &>*{width: 100%;}
   &>* +*{margin-top: 100px;}
   @media (max-width: 767px) {
+    padding-bottom: 60px;
   &>*+* {
       margin-top: 60px;
     }
 
-  padding-bottom: 60px;
   }
 }
 .container{

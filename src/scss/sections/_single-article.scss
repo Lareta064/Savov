@@ -155,6 +155,17 @@
 	grid-template-columns: 1fr 439px;
 	column-gap: 40px;
 	align-items: flex-start;
+	.dark-block__img{
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		img{
+			width: 100%;
+			aspect-ratio:439 / 343;
+			object-fit: contain;
+			border-radius: 24px;
+		}
+	}
 	@media (max-width: 1699px) {
 		grid-template-columns: 1fr 315px;
 		column-gap: 28px;

@@ -48,7 +48,7 @@
 }
 .main .promo-banner{
 	min-height: 582px;
-	@media (max-width: 1439px) {
+	@media (max-width: 1699px) {
 		min-height: 444px;
 	}
 	@media (max-width: 767px) {min-height: 505px;}
@@ -63,7 +63,7 @@
 	.subtitle {max-width: 700px;font-family: $ff;}
 			
 		
-	@media (max-width: 1439px) {
+	@media (max-width: 1699px) {
 		margin-bottom: 10px;
 		width: min(630px, 70%);
 		.subtitle{max-width: 500px;}

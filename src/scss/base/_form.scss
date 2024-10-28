@@ -20,7 +20,8 @@
 .inner-form-row{
 	background-color: #2B2C2E;
 	border-radius: 24px;
-	padding: 25px 30px;
+	padding: 27px 30px;
+	padding-right: 50px;
 	column-gap:125px;
 	
 	.inner-text{
@@ -32,8 +33,8 @@
 		max-width: 800px;
 		img{
 			flex-shrink: 0;
-			width: 141px;
-			height: 168px;
+			width: 115px;
+			height: 120px;
 			@media (max-width: 1599px) {
 				width: 93px;
 				height: 110px;
@@ -62,13 +63,20 @@
 	@media (max-width: 1023px) {
 	  flex-direction: column;
 	  padding:14px;
+	  padding-right: 14px;
 	 
 	 .inner-text{
 		column-gap: 14px;
-		margin-bottom: 27px;
+		margin-bottom: 10px;
 	 }
 	}
 	@media (max-width: 767px) {
 	  border-radius: 12px;
+	}
+}
+.form-btn .btn[type]{
+	height: 54px;
+	@media (max-width: 767px) {
+	height: 46px;
 	}
 }
