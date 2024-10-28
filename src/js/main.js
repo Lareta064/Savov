@@ -110,60 +110,123 @@ document.addEventListener("DOMContentLoaded", function () {
 		updateActiveMenuItem();
 	}
 	/******slick slider******** */
-	  function initializeSlider() {
-		if ($(window).width() < 1024) {
-		if (!$('.catalogy-slider').hasClass('slick-initialized')) {
-			$('.catalogy-slider').slick({
-			// Ваши настройки слайдера
-			dots: true,
-			// infinite: true,
-			speed: 500,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			responsive: [
-				{
-					breakpoint: 1024,
-					settings: {
-						dots: true,
-						slidesToShow: 2,
-						slidesToScroll: 1,
-						dots: true
-					}
-				},
-				{
-					breakpoint: 799,
-					settings: {
+	$('.catalogy-slider').slick({
+		// Ваши настройки слайдера
+		
+		// infinite: true,
+		speed: 500,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 1919,
+				settings: {
+					slidesToShow: 2.5,
+					slidesToScroll: 1,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 1699,
+				settings: {
+				
+					slidesToShow: 2.2,
+					slidesToScroll: 1,
 					
-						slidesToShow: 1.5,
-						slidesToScroll: 1,
-						dots: true,
-					}
-				},
-				{
-					breakpoint: 574,
-					settings: {
-						dots: true,
-						slidesToShow: 1,
-						slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 1365,
+				settings: {
+				
+					slidesToShow: 2,
+					
+				}
+			},
+			{
+				breakpoint: 1199,
+				settings: {
+				
+					slidesToShow: 1.7,
+					slidesToScroll: 1,
+					
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+				
+					slidesToShow: 1.5,
+					slidesToScroll: 1,
+					dots: true,
+				}
+			},
+			{
+				breakpoint: 574,
+				settings: {
+					dots: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					
+				}
+			},
+		]
+
+		});
+	//   function initializeSlider() {
+	// 	if ($(window).width() < 1024) {
+	// 	if (!$('.catalogy-slider').hasClass('slick-initialized')) {
+	// 		$('.catalogy-slider').slick({
+	// 		// Ваши настройки слайдера
+	// 		dots: true,
+	// 		// infinite: true,
+	// 		speed: 500,
+	// 		slidesToShow: 1,
+	// 		slidesToScroll: 1,
+	// 		responsive: [
+	// 			{
+	// 				breakpoint: 1024,
+	// 				settings: {
+	// 					dots: true,
+	// 					slidesToShow: 2,
+	// 					slidesToScroll: 1,
+	// 					dots: true
+	// 				}
+	// 			},
+	// 			{
+	// 				breakpoint: 799,
+	// 				settings: {
+					
+	// 					slidesToShow: 1.5,
+	// 					slidesToScroll: 1,
+	// 					dots: true,
+	// 				}
+	// 			},
+	// 			{
+	// 				breakpoint: 574,
+	// 				settings: {
+	// 					dots: true,
+	// 					slidesToShow: 1,
+	// 					slidesToScroll: 1,
 						
-					}
-				},
-			]
+	// 				}
+	// 			},
+	// 		]
 
-			});
-		}
-		} else {
-		if ($('.catalogy-slider').hasClass('slick-initialized')) {
-			$('.catalogy-slider').slick('unslick'); // Уничтожаем слайдер
-		}
-		}
-	}
+	// 		});
+	// 	}
+	// 	} else {
+	// 	if ($('.catalogy-slider').hasClass('slick-initialized')) {
+	// 		$('.catalogy-slider').slick('unslick'); // Уничтожаем слайдер
+	// 	}
+	// 	}
+	// }
 
-	initializeSlider(); // Инициализируем слайдер при загрузке страницы
+	// initializeSlider(); // Инициализируем слайдер при загрузке страницы
 
-	$(window).resize(function() {
-		initializeSlider(); // Переинициализируем при изменении размера окна
-	});
+	// $(window).resize(function() {
+	// 	initializeSlider(); // Переинициализируем при изменении размера окна
+	// });
 	 
 	// Расчет ширины для .slick-dots li
     function setDotsWidth() {

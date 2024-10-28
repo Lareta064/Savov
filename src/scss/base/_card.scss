@@ -235,7 +235,7 @@
 		margin-inline: auto;
 		object-fit: contain;
 	}
-	.btn{width: 100%; max-width: 288px;}
+	.btn{width: 100%; max-width: 288px; height: 50px;}
 	@media (max-width: 1699px) {
 		row-gap: 40px;
 		.cta-card__title{font-size: 32px;}
