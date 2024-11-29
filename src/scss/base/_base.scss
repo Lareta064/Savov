@@ -97,12 +97,16 @@ main{
   &>* +*{margin-top: 100px;}
   @media (max-width: 767px) {
     padding-bottom: 60px;
-  &>*+* {
+    &>*+* {
       margin-top: 60px;
     }
-
   }
 }
+a{
+  transition: .3s;
+  &:hover{color: #A4A6A9;}
+}
+
 .container{
   width:min(1830px, 100%);
   padding-inline: 96px;
@@ -161,6 +165,7 @@ main{
 .grid-three-columns>.large-card{
   grid-column: span 8;
   grid-row: span 1;
+  width: 100%;
   @media (max-width: 1023px) {
       grid-column: span 12;
     }

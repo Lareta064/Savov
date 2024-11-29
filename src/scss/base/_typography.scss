@@ -3,33 +3,20 @@
 	color: white;
 	line-height: .89;
 	font-weight: 800;
-	@media (max-width: 1699px) {
-	  font-size: 70px;
-	}
-	@media (max-width: 1023px) {
-		font-size: 56px;
-	}
-	@media (max-width: 767px) {
-	 font-size: 36px;
+	@media (max-width: 1919px) {
+	 font-size: calc(36px + (90 - 36) * ((100vw - 390px) / (1920 - 390)));
 	}
 }
 .inner-promo h1, .inner-promo .h1{
 	font-weight: 800;
 	font-size: 96px;
-	line-height: 100%;
+	
 	letter-spacing: -0.01em;
 	color: #f9f9f9;
-	@media (max-width: 1699px) {
-		font-size: 70px;
+	@media (max-width: 1919px) {
+		font-size: calc(35px + (96 - 35) * ((100vw - 390px) / (1920 - 390)));
 	}
-
-	@media (max-width: 1023px) {
-		font-size: 56px;
-	}
-
-	@media (max-width: 767px) {
-		font-size: 35px;
-	}
+	
 }
 .title{
 	font-weight: 800;
@@ -92,7 +79,7 @@
 }
 .subtitle{
 	font-family: $ft;
-	@media (max-width: 1439px) {
+	@media (max-width: 1699px) {
 		font-size: 16px;
 	}
 }
@@ -124,8 +111,8 @@
 	}
 }
 .breadcrumbs{
-	padding-top: 9px;
-	padding-bottom: 9px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	
 	li{
 		display: inline-block;
@@ -145,6 +132,8 @@
 			color: #eee;
 			padding-right: 6px;
 			font-family: $ft;
+			transition: .3s;
+			&:hover{color: #A4A6A9;}
 			@media (max-width: 767px) {
 			font-size: 10px;
 			font-family: $ff;

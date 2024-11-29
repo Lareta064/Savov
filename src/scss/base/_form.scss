@@ -10,6 +10,7 @@
 		border: none;
 		border-bottom: 1px solid white;
 		background-color: #2B2C2E;
+		border-radius: 0;
 		&::placeholder{
 			font-size: 18px;
 			color: white;
@@ -75,8 +76,6 @@
 	}
 }
 .form-btn .btn[type]{
-	height: 54px;
-	@media (max-width: 767px) {
 	height: 46px;
-	}
+	
 }

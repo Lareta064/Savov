@@ -1,4 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
+	/* ======  menu icon click ====== */
+	const menuToggle = document.querySelector('#menu-toggle');
+	const mobileMenu = document.querySelector('#header-menu');
+	const bodyEl = document.body;
+
+	if (menuToggle) {
+
+		/*   клик поиконке гамбургер*/  
+		menuToggle.addEventListener('click', ()=> {
+			
+			if (menuToggle.classList.contains('active')) {
+
+				menuToggle.classList.remove('active');
+				mobileMenu.classList.remove('active');
+				bodyEl.classList.remove('lock');
+			
+			} else {
+				menuToggle.classList.add('active');
+			    mobileMenu.classList.add('active');
+				bodyEl.classList.add('lock');
+			}
+		});
+
+       /*   клик по мобильному меню*/  
+		mobileMenu.addEventListener('click', () => {
+			menuToggle.classList.remove('active');
+			mobileMenu.classList.remove('active');
+			bodyEl.classList.remove('lock');
+		});
+	}
 	/*======переключение активного класса ====*/ 
 	function toggleActiveClass(parentClass, childClass) {
 		const parents = document.querySelectorAll('.' + parentClass);
@@ -53,11 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	}
-	/*******article-menu******* */
+	/*===========article-menu============== */
     const articleContent = document.getElementById('article-content');
     const articleMenu = document.getElementById('article-menu');
-	const headings = articleContent.querySelectorAll('h2');
+	
     if(articleMenu){
+		const headings = articleContent.querySelectorAll('h2');
 		headings.forEach(heading => {
 			const anchorId = heading.id;
 			const menuItem = document.createElement('li');
@@ -109,28 +140,27 @@ document.addEventListener("DOMContentLoaded", function () {
 		
 		updateActiveMenuItem();
 	}
-	/******slick slider******** */
+	/*==========slick slider========== */
 	$('.catalogy-slider').slick({
-		// Ваши настройки слайдера
 		
-		// infinite: true,
 		speed: 500,
 		slidesToShow: 3,
 		slidesToScroll: 1,
+		dots: false,
 		responsive: [
 			{
 				breakpoint: 1919,
 				settings: {
-					slidesToShow: 2.5,
+					slidesToShow: 3,
 					slidesToScroll: 1,
-					dots: true
+					
 				}
 			},
 			{
 				breakpoint: 1699,
 				settings: {
 				
-					slidesToShow: 2.2,
+					slidesToShow: 3,
 					slidesToScroll: 1,
 					
 				}
@@ -139,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				breakpoint: 1365,
 				settings: {
 				
-					slidesToShow: 2,
+					slidesToShow: 3,
 					
 				}
 			},
@@ -147,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				breakpoint: 1199,
 				settings: {
 				
-					slidesToShow: 1.7,
+					slidesToShow: 2,
 					slidesToScroll: 1,
 					
 				}
@@ -156,13 +186,13 @@ document.addEventListener("DOMContentLoaded", function () {
 				breakpoint: 1024,
 				settings: {
 				
-					slidesToShow: 1.5,
+					slidesToShow: 2,
 					slidesToScroll: 1,
 					dots: true,
 				}
 			},
 			{
-				breakpoint: 574,
+				breakpoint: 767,
 				settings: {
 					dots: true,
 					slidesToShow: 1,
@@ -173,60 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		]
 
 		});
-	//   function initializeSlider() {
-	// 	if ($(window).width() < 1024) {
-	// 	if (!$('.catalogy-slider').hasClass('slick-initialized')) {
-	// 		$('.catalogy-slider').slick({
-	// 		// Ваши настройки слайдера
-	// 		dots: true,
-	// 		// infinite: true,
-	// 		speed: 500,
-	// 		slidesToShow: 1,
-	// 		slidesToScroll: 1,
-	// 		responsive: [
-	// 			{
-	// 				breakpoint: 1024,
-	// 				settings: {
-	// 					dots: true,
-	// 					slidesToShow: 2,
-	// 					slidesToScroll: 1,
-	// 					dots: true
-	// 				}
-	// 			},
-	// 			{
-	// 				breakpoint: 799,
-	// 				settings: {
-					
-	// 					slidesToShow: 1.5,
-	// 					slidesToScroll: 1,
-	// 					dots: true,
-	// 				}
-	// 			},
-	// 			{
-	// 				breakpoint: 574,
-	// 				settings: {
-	// 					dots: true,
-	// 					slidesToShow: 1,
-	// 					slidesToScroll: 1,
-						
-	// 				}
-	// 			},
-	// 		]
-
-	// 		});
-	// 	}
-	// 	} else {
-	// 	if ($('.catalogy-slider').hasClass('slick-initialized')) {
-	// 		$('.catalogy-slider').slick('unslick'); // Уничтожаем слайдер
-	// 	}
-	// 	}
-	// }
-
-	// initializeSlider(); // Инициализируем слайдер при загрузке страницы
-
-	// $(window).resize(function() {
-	// 	initializeSlider(); // Переинициализируем при изменении размера окна
-	// });
+	
 	 
 	// Расчет ширины для .slick-dots li
     function setDotsWidth() {

@@ -6,12 +6,11 @@
 @import "base/_card";
 @import "base/_form";
 
-//sections
+@import "blocks/_gamburger.scss";
+@import "sections/header";
+@import "sections/_promo";
+@import "sections/_catalogy";
+@import "sections/_inner-promo";
+@import "sections/_single-article";
 
- @import "sections/header";
- @import "sections/_promo";
- @import "sections/_catalogy";
- @import "sections/_inner-promo";
- @import "sections/_single-article";
- 
- @import "sections/_footer";
+@import "sections/_footer";

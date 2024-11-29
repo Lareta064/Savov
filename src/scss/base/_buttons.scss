@@ -8,7 +8,6 @@
 	flex-shrink: 0;
 	border-radius: 35px;
 	font-family: $ft;
-	
 	transition: .3s; 
 }
 .btn:hover,
@@ -23,10 +22,7 @@
 	font-weight: 700;
 	column-gap: 10px;
 	cursor: pointer;
-	@media (max-width: 1439px) {
-	 height: 60px;
-	font-size: 18px;
-	}
+	@media (max-width: 1439px) {font-size: 18px;}
 	// @media (max-width: 767px) {
 	//   height: 46px;
 	// }
@@ -36,11 +32,9 @@
 	background-color: #131313;
 	border-color: #131313;
 	font-weight: 900;
-	font-family: $fs;
+	font-family: $ff;
 	letter-spacing: 0.07em;
-	@media (max-width: 767px) {
-		height: 50px;
-	}
+	@media (max-width: 767px) {height: 47px;}
 }
 .tag{
 	height: 47px;
@@ -123,7 +117,7 @@
 		padding-inline: 30px;
 		font-size: 18px;
 	}
-	@media (max-width: 1699px) {
+	@media (max-width: 1364px) {
 		height: 40px;
 		padding-inline: 28px;
 		font-size: 14px;

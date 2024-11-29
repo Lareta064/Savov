@@ -13,7 +13,7 @@
 		aspect-ratio: 467/319;
 		// height: 319px;
 		position: relative;
-		border-radius: 24px;
+		border-radius: inherit;
 		overflow: hidden;
 		&:after{
 			content:'';
@@ -119,14 +119,17 @@
 	background-color: #282828;
 	
 	margin-inline: auto;
+	@media (max-width: 1699px) {
+		border-radius: 12px;
+	}
 	@media (max-width: 767px) {
 	padding: 14px;
-	border-radius: 12px;max-width: 527px;
+	max-width: 527px;
 	}
 }
 .video-box{
 	position: relative;
-	border-radius: 24px;
+	border-radius: inherit;
 	overflow: hidden;
 	width: 100%;
 	aspect-ratio: 514 / 311;
@@ -145,7 +148,7 @@
 		position: absolute;
 		inset:0;
 		z-index: 1;
-		border-radius: 24px;
+		border-radius: inherit;
 		transition: .3s; 
 		cursor: pointer;
 		video, img{

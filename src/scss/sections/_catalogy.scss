@@ -21,8 +21,11 @@
 	.pagination{
 		margin-left: auto;
 	}
+	@media (max-width: 1699px) {
+		margin-top: 27px;
+	}
 	@media (max-width: 1023px) {
-		margin-top: 40px;		
+				
 	  flex-direction: column;
 	  justify-content: center;
 	  row-gap: 14px;
