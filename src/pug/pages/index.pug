@@ -1,13 +1,15 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_header.pug
-	main.main
-		include ../sections/_promo.pug
-		include ../sections/_catalogy.pug
-	include ../sections/_footer.pug
-	
-	
-	
+	.start-page
+		h1 Savov
+		.start-page__cards
+			a(href="./ui/colors.html") UI-KIT PAGE
+			
+			a(href="main.html")
+				span Главная
+
+							
+
 block variables
-	-var title = "Home";
+	-var title = "Allterra";

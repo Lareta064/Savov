@@ -1,0 +1,127 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard(style="background: #f0f0f0")
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Форма
+				.container-dashboard__content
+					h3 Компонент сортировки
+					.sort
+						.sort__name Сортировать по:
+						.sort__btns
+							label.sort-type
+								input(type="checkbox" name="sort-item")
+								span релевантности
+							label.sort-type
+								input(type="checkbox" name="sort-item")
+								span дате
+					
+					pre.
+						.sort
+							.sort__name Сортировать по:
+							.sort__btns
+								label.sort-type
+									input(type="checkbox" name="sort-item")
+									span релевантности
+								label.sort-type
+									input(type="checkbox" name="sort-item")
+									span дате
+					form.header-search.flex-center-y
+						.form_field
+							input(type="text" name="" placeholder="Поиск по сайту")
+							
+							//===== clean input button =====
+							button(type="rezet").btn-icon
+								svg.svg-cross
+									use( href='../img/spriteSvg.svg#svg-cross')
+						
+						//======FORM BUTTON=====		
+						.form__btn
+							button(type="submit").btn-accent Найти
+					pre.
+						//=======search form ======
+						form.header-search.flex-center-y
+							.form_field
+								input(type="text" name="" placeholder="Поиск по сайту")
+								
+								//===== clean input button =====
+								button(type="rezet").btn-icon
+									svg.svg-cross
+										use( href='.../img/spriteSvg.svg#svg-cross')
+							
+							//======FORM BUTTON=====		
+							.form__btn
+								button(type="submit").btn-accent Найти					
+					
+					
+					.form_field
+						input(type="text" name="name" placeholder="Ваше имя*")
+					pre.
+						.form_field
+							input(type="text" name="name" placeholder="Ваше имя*")						
+					.form_field
+						textarea(name="message" placeholder="Сообщение")
+					pre.
+						.form_field
+							texarea(name="message" placeholder="Сообщение")				
+					.form_field.error
+						input(type="text" name="name" placeholder="Ваше имя*")
+					pre.
+						.form_field.error
+							input(type="text" name="name" placeholder="Ваше имя*")
+
+
+					
+					label.form-checkbox
+						input(type="checkbox" name="name_chk")
+						span.fake-checkbox
+					pre.
+						label.form-checkbox
+							input(type="checkbox" name="name_chk")
+							span.fake-checkbox
+					
+					label.form-radio
+						input(type="radio" name="name_radio")
+						span.fake-radio
+					
+					pre.
+						label.form-radio
+							input(type="radio" name="name_radio")
+							span.fake-radio
+					
+					.form-confirm
+						label.form-checkbox
+							input(type="checkbox" name="name_chk")
+							span.fake-checkbox
+							span.form-confirm__text Ознакомился с #[a.accent-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
+					pre.
+						.form-confirm
+							label.form-checkbox
+								input(type="checkbox" name="name_chk")
+								span.fake-checkbox
+								span.form-confirm__text Ознакомился с #[a.accent-link(href="#!") политикой конфидециальности] и даю своё согласие на обработку персональных данных
+
+					
+					form.dark-opacity
+						.form_field
+							input(type="text" name="name" placeholder="Ваше имя*")
+					pre.
+						form.dark-opacity
+							.form_field
+								input(type="text" name="name" placeholder="Ваше имя*")

@@ -1,0 +1,60 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Кнопки
+
+				.container-dashboard__content
+					button(type="button").btn-accent Кнопка
+					pre.
+						button(type="button").btn-accent Кнопка
+					div
+						button(type="button").btn.btn--slim Кнопка
+					pre.
+						button(type="button").btn.btn--slim Кнопка 54px			
+					button(type="button").btn Кнопка
+					pre.
+						button(type="button").btn Кнопка
+					
+					div(style="padding: 15px 30px; background: #1f1f1f;")
+						button(type="button").btn-br Кнопка
+					pre.
+						button(type="button").btn-br Кнопка
+
+					div(style="padding: 15px 30px; background: #1f1f1f;")
+						button(type="button").btn-white Кнопка
+					pre.
+						button(type="button").btn-white Кнопка
+					div(style="padding: 15px 30px; background: #f5f5f5;")
+						button(type="button").btn-br-white Кнопка
+					pre.
+						button(type="button").btn-br-white Кнопка
+					
+					
+					div(style="padding: 15px 30px; background: #f0f0f0;")
+						.btns-group
+							a(href="#!").btn--slim.btn-white Все новости
+							a(href="#!").btn--slim.btn Все статьи
+						pre.
+							Группа кнопок высотой 52 пикселя
+							.btns-group
+								a(href="#!").btn--slim.btn-white Все новости
+								a(href="#!").btn--slim.btn Все статьи
+						
