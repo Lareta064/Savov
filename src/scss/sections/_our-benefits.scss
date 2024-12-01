@@ -33,6 +33,33 @@
 	}
 	&.benefit-3{
 		background-color: #282828;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.2;
+		color: rgba(249, 249, 249, .75);
+		.txt-semi{
+			color: rgba(249, 249, 249, 1);
+		}
+		.text-34{
+			font-weight: 900;
+			font-size: 34px;
+			line-height: 1;
+			color: #d6d6d6;
+			margin-bottom: 20px;	
+		}
+		.txt-18{margin-bottom: 30px; font-family: $ft;}
+		img{
+			width: 195px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-block:30px;
+		}
+		.btn-grey{
+			white-space: nowrap;
+			padding-left: 10px;
+			padding-right: 10px;
+			width: 100%;
+		}
 	}
 	&.benefit-4{
 		width: 100%;
