@@ -107,12 +107,14 @@
 		padding-left: 34px;
 		padding-right: 34px;
 	}
+	.btn.btn--black{height: 64px;}
 	@media (max-width: 1439px) {
 		.tag{
 			padding-inline: 15px;
 			height: 30px;
 			font-size: 12px;
 		}
+		.btn.btn--black{height: 60px;}
 	}
 	@media (max-width: 767px) {
 	   flex-direction: column;
@@ -120,7 +122,7 @@
 	   flex-grow:1;
 	   &>*{width: 100%;}
 	   .tags-wrapper{justify-content: flex-start;}
-	   .btn.btn--black{width: 100%; max-width: 340px;}
+	   .btn.btn--black{width: 100%; max-width: 340px; height: 50px;}
 		.hide-desktop{width: 100%;}
 	}
 	

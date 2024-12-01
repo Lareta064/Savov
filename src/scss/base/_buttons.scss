@@ -30,6 +30,7 @@
 }
 .btn.btn--black{
 	background-color: #131313;
+	background-color: rgb(19, 19, 19);;
 	border-color: #131313;
 	font-weight: 900;
 	font-family: $ff;
@@ -122,4 +123,25 @@
 		padding-inline: 28px;
 		font-size: 14px;
 	}
+}
+
+.btn-accent{
+	height: 64px;
+	background-color: $accent;
+	font-family: $ff;
+	font-weight: 900;
+	font-size: 20px;
+	color: white;
+	padding-left: 46px;
+	padding-right: 46px;
+	border-radius: 40px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+	column-gap:10px;
+	transition: .3s; 
+	&:hover{background-color: #e57321;}
+	@media (max-width: 1439px) {height: 60px;}
+	@media (max-width: 767px) {height: 50px;}
 }
