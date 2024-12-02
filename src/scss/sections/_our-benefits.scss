@@ -105,10 +105,14 @@
 .benefit-card.benefit-slider{
 	background-color: #282828;
 	flex-direction:row;
+	padding-bottom: 22px;
+	padding-top: 19px;
+	padding-right: 20px;
 	gap:30px;
 	.benefit-card__col{
 		display: flex;
 		flex-direction: column;
+		padding-bottom: 30px;
 		.txt-34{width: 100%;}
 	}
 	.result-slider{
@@ -118,28 +122,36 @@
 	}
 	.result-company{
 		flex-grow:1;
-		border: 2px solid blue;
-		
-		
+		margin-top: 12px;
 		position: relative;
-		.company-name{
+		padding-left: 25px;
+		border-left: 1px solid #888;
+		.company-card{
 			position: absolute;
 			inset:0;
-			bottom: 50px;
+			bottom: 20px;
+			left:25px;
 			background-color: #282828;
 			z-index: -1;
-			opacity: 0;
+			opacity: 0.1;
+			font-size: 12px;
+			color: #888;
+			font-family: $inter;
+			p{margin-bottom: 7px;}
 		}
-		.company-name.active{
+		.company-logo{
+            margin-bottom: 24px;
+		}
+		.company-card.active{
 			z-index: 2;
 			animation-name: opacity;
-			animation-duration:.3s;
+			animation-duration:.5s;
 			animation-delay: .2s;
 			animation-fill-mode: forwards;
 			animation-timing-function: linear;
 		}
 	}
-	.swiper-pagination-bullet{background-color: #fff;}
+	
 }
 @keyframes opacity{
 	to{opacity: 1;}
@@ -158,10 +170,10 @@
 	
 	span{
 		position: absolute; 
-		right: 10px; 
+		right: 20px; 
 		font-size: 13px; 
 		line-height: 0.97;
-		top: 8px;
+		top: 10px;
 
 		font-weight: 700;
 		color: #282828;
@@ -178,5 +190,8 @@
 	.progress-line{background-color: $accent;}
 }
 .progress-block +.progress-block{
-	margin-top: 17px;
+	margin-top: 13px;
+}
+.result-slider-pagination.swiper-pagination{
+	bottom: 0;
 }

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const resultSlider = new Swiper('.result-slider', {
         pagination: {
-            el: ".swiper-pagination",
+            el: ".result-slider-pagination",
 			clickable: true,
         },
     });
@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Получаем индекс активного слайда
         const activeIndex = resultSlider.activeIndex;
 
-        // Находим все элементы .company-name
-        const companyNames = document.querySelectorAll('.company-name');
+        // Находим все элементы .company-card
+        const companyNames = document.querySelectorAll('.company-card');
 
         // Удаляем класс 'active' у всех .company-name
         companyNames.forEach(name => name.classList.remove('active'));
