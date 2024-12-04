@@ -1,6 +1,6 @@
 .btn,
 .btn[type],
-.tag,.tag-slim{
+.tag,.tag-slim, .btn-black, .btn-black-64{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -23,9 +23,6 @@
 	column-gap: 10px;
 	cursor: pointer;
 	@media (max-width: 1439px) {font-size: 18px;}
-	// @media (max-width: 767px) {
-	//   height: 46px;
-	// }
 	
 }
 .btn.btn--black{
@@ -33,6 +30,7 @@
 	background-color: rgb(19, 19, 19);;
 	border-color: #131313;
 	font-weight: 900;
+	color: $white;
 	font-family: $ff;
 	letter-spacing: 0.07em;
 	@media (max-width: 767px) {height: 47px;}
@@ -124,7 +122,7 @@
 		font-size: 14px;
 	}
 }
-.btn-accent, .btn-accent[type="submit"], .btn-grey, .btn-grey[type="submit"]{
+.btn-accent, .btn-accent[type="submit"], .btn-grey, .btn-grey[type="submit"], .btn-black-64, .btn-black-64[type="submit"]{
 	padding-left: 46px;
 	padding-right: 46px;
 	border-radius: 40px;
@@ -147,9 +145,22 @@
 	@media (max-width: 1439px) {height: 60px;}
 	@media (max-width: 767px) {height: 50px;}
 }
-.btn-grey{
+.btn-grey,.btn-black, .btn-black-64{
 	height: 52px;
 	font-weight: 700;
 	font-family: $ft;
 	background: #4d4e4f;
+}
+.btn-black, .btn-black-64{
+	padding-left: 36px;
+	padding-right: 36px;
+	color: #fff;
+	background-color: #282828;
+	font-family: $ft;
+	font-size: 20px;
+}
+.btn-black-64{
+	height: 64px;
+	padding-left: 45px;
+	padding-right: 45px;
 }
