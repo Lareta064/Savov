@@ -1,4 +1,10 @@
 .seo-map{
 	padding-top: 82px;
 	padding-bottom: 55px;
+	.title, .title-sub{
+		max-width: 70%;
+		@media (max-width: 1023px) {
+		  width: 100%;
+		}
+	}
 }

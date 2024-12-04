@@ -1,7 +1,14 @@
-.promo+* {
-	padding-top: 40px!important;
-	margin-top: 0!important;
+.main .promo +* {
+	
+	padding-top: 40px;
+	// margin-top: 0!important;
 
+}
+.inner-main .promo +*{
+	padding-top: 80px;
+	@media (max-width: 767px) {
+		padding-top: 40px;
+	}
 }
 .promo-banner{
 	padding: 72px 40px 37px 61px;
