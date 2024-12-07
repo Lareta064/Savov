@@ -121,7 +121,7 @@
 .our-benefits-grid{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	// grid-template-rows: 288px 302px;
+	
 	grid-column-gap: 30px;
 	grid-row-gap: 30px;
 	@media (max-width: 1919px) {
